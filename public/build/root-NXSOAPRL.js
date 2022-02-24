@@ -1,0 +1,37 @@
+import {
+  Links,
+  LiveReload
+} from "/build/_shared/chunk-NJPVDBXF.js";
+import {
+  React,
+  init_react
+} from "/build/_shared/chunk-YZVLR6ER.js";
+
+// browser-route-module:C:\Users\91754\Desktop\remix-todo\app\root.tsx?browser
+init_react();
+
+// app/root.tsx
+init_react();
+
+// app/styles/index.css
+var styles_default = "/build/_assets/index-AC3DKB53.css";
+
+// app/root.tsx
+var links = () => {
+  return [{ rel: "stylesheet", href: styles_default }];
+};
+function App() {
+  return /* @__PURE__ */ React.createElement("html", {
+    lang: "en"
+  }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement("meta", {
+    charSet: "utf-8"
+  }), /* @__PURE__ */ React.createElement("meta", {
+    name: "viewport",
+    content: "width=device-width,initial-scale=1"
+  }), /* @__PURE__ */ React.createElement("title", null, "Remix JS"), /* @__PURE__ */ React.createElement(Links, null)), /* @__PURE__ */ React.createElement("body", null, /* @__PURE__ */ React.createElement("h1", null, "Hello"), /* @__PURE__ */ React.createElement(LiveReload, null)));
+}
+export {
+  App as default,
+  links
+};
+//# sourceMappingURL=/build/root-NXSOAPRL.js.map

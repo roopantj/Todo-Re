@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\91754\\Desktop\\remix-todo\\app\\routes\\index.tsx?browser", "../../../app/routes/index.tsx"],
+  "sourcesContent": ["export { default, links } from \"C:\\\\Users\\\\91754\\\\Desktop\\\\remix-todo\\\\app\\\\routes\\\\index.tsx\";", "import type { LinksFunction } from \"remix\";\nimport stylesUrl from \"~/styles/index.css\";\nexport const links: LinksFunction = () => {\n  return [{ rel: \"stylesheet\", href: stylesUrl }];\n};\nexport default function HomePage() {\n  return <h1>Homepage</h1>;\n}\n"],
+  "mappings": ";;;;;;;;;AAAA;;;ACAA;AAEO,IAAM,QAAuB,MAAM;AACxC,SAAO,CAAC,EAAE,KAAK,cAAc,MAAM;AAAA;AAEtB,oBAAoB;AACjC,SAAO,oCAAC,MAAD,MAAI;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\91754\\Desktop\\remix-todo\\app\\routes\\todo\\index.js?browser"],
+  "sourcesContent": ["export * from \"C:\\\\Users\\\\91754\\\\Desktop\\\\remix-todo\\\\app\\\\routes\\\\todo\\\\index.js\";"],
+  "mappings": ";;;;;AAAA;",
+  "names": []
+}

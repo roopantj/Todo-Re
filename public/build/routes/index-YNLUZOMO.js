@@ -1,0 +1,1 @@
+import{a as r}from"/build/_shared/chunk-AMPUIY2W.js";import{f as t,g as e}from"/build/_shared/chunk-EFF4OLHG.js";e();e();var s=()=>[{rel:"stylesheet",href:r}];function o(){return t.createElement("h1",null,"Homepage")}export{o as default,s as links};
