@@ -1,6 +1,6 @@
 import { LiveReload, Outlet, Links } from "remix";
 import type { LinksFunction } from "remix";
-import styleUrl from "~/styles/index.css";
+import styleUrl from "~/styles/app.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styleUrl }];
@@ -11,7 +11,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Remix JS</title>
+        <title>Remix JS </title>
         <Links />
       </head>
       <body>

@@ -21,9 +21,13 @@
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.4.2",
+    "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
     "esbuild-register": "^3.3.2",
+    "postcss": "^8.4.7",
     "prisma": "^3.10.0",
+    "tailwindcss": "^3.0.23",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   },
@@ -36,8 +40,10 @@
   },
   "scripts": {
     "postinstall": "remix setup node",
-    "build": "remix build",
-    "dev": "cross-env NODE_ENV=development netlify dev",
-    "start": "cross-env NODE_ENV=production netlify dev"
+    "start": "cross-env NODE_ENV=production netlify dev",
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"cross-env NODE_ENV=development netlify dev\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css"
   }
 }
