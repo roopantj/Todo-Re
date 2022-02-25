@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\91754\\Desktop\\Todo-Re\\app\\routes\\index.tsx?browser", "../../../app/routes/index.tsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\91754\\\\Desktop\\\\Todo-Re\\\\app\\\\routes\\\\index.tsx\";", "import type { LinksFunction } from \"remix\";\n\nexport default function HomePage() {\n  return <h1>Homepage</h1>;\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAEe,oBAAoB;AACjC,SAAO,oCAAC,MAAD,MAAI;AAAA;",
+  "names": []
+}
