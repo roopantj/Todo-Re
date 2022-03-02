@@ -6,6 +6,7 @@ type LoginForm = {
   username: string;
   password: string;
 };
+
 //const db = new PrismaClient();
 export async function login({ username, password }: LoginForm) {
   //const user = await db.user.findFirst({ where: { username } });
@@ -39,6 +40,21 @@ export async function register({ username, password }: LoginForm) {
     data: { username, passwordHash },
   });
   return { id: user.id, username };
+}
+export async function loginWithGoogle({ username, password }: LoginForm) {
+  const user = await db.user.findFirst({
+    where: { username: username },
+    select: { id: true },
+  });
+  if (!user) {
+    const passwordHash = await bcrypt.hash(password, 10);
+    const newuser = await db.user.create({
+      data: { username: username, passwordHash: passwordHash },
+    });
+    return { id: newuser.id };
+  } else {
+    return { id: user.id };
+  }
 }
 export async function createUserSession(userId: string, redirectTo: string) {
   const session = await storage.getSession();

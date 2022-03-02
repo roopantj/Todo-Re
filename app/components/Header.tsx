@@ -9,8 +9,12 @@ const Header = ({ user }: props) => {
         <h2>Welcome {user}</h2>
       </div>
       <div className="actions">
-        <Link to="/todo">Todo List</Link>
-        <Link to="/todo/new">Add new Todo</Link>
+        <div className="links">
+          <Link to="/todo">Todo List</Link>
+        </div>
+        <div className="links">
+          <Link to="/todo/new">Add new Todo</Link>
+        </div>
         <form action="/logout" method="post">
           <button type="submit">Logout</button>
         </form>

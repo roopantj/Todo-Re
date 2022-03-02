@@ -1,5 +1,5 @@
 // app/styles/login.css
-var login_default = "/build/_assets/login-MQ6LH7G2.css";
+var login_default = "/build/_assets/login-4256ZQXN.css";
 
 export {
   login_default

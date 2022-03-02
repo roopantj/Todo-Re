@@ -15,7 +15,7 @@ init_react();
 init_react();
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-2SV5FPJH.css";
+var app_default = "/build/_assets/app-CQL5IY7A.css";
 
 // app/root.tsx
 var links = () => {

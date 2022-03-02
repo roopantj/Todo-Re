@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\91754\\Desktop\\Todo-Re\\app\\routes\\index.tsx?browser", "../../../app/routes/index.tsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\91754\\\\Desktop\\\\Todo-Re\\\\app\\\\routes\\\\index.tsx\";", "import { Link } from \"remix\";\n\nexport default function HomePage() {\n  return (\n    <div>\n      <h1 className=\"text-slate-400\">Login to add your Todo</h1>\n      <Link to=\"/login\">Login</Link>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAEe,oBAAoB;AACjC,SACE,oCAAC,OAAD,MACE,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KAAiB,2BAC/B,oCAAC,MAAD;AAAA,IAAM,IAAG;AAAA,KAAS;AAAA;",
+  "names": []
+}

@@ -7,26 +7,25 @@ import stylesUrl from "~/styles/Header.css";
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
 };
-type LoaderData = {
-  id: string;
-  username: string;
-};
+
 export const loader: LoaderFunction = async ({ request }) => {
   const userId = await requireUserId(request);
   const user = await db.user.findUnique({
     where: { id: userId },
     select: { id: true, username: true },
   });
-  return user;
+  if (user?.username && user?.username.length > 21)
+    return [...user.username].slice(21).join("");
+  return user?.username;
 };
 export const action: ActionFunction = async ({ request }) => {
   return logout(request);
 };
 export default function Todo() {
-  const user: LoaderData = useLoaderData();
+  const username = useLoaderData();
   return (
     <div>
-      <Header user={user.username} />
+      <Header user={username} />
       <Outlet />
     </div>
   );

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\91754\\Desktop\\Todo-Re\\app\\root.tsx?browser", "../../app/root.tsx"],
+  "sourcesContent": ["export { default, links } from \"C:\\\\Users\\\\91754\\\\Desktop\\\\Todo-Re\\\\app\\\\root.tsx\";", "import { LiveReload, Outlet, Links } from \"remix\";\r\nimport type { LinksFunction } from \"remix\";\r\nimport tailwindURL from \"~/tailwind.css\";\r\n//import styleUrl from \"~/styles/app.css\";\r\n\r\nexport const links: LinksFunction = () => {\r\n  return [{ rel: \"stylesheet\", href: tailwindURL }];\r\n};\r\nexport default function App() {\r\n  return (\r\n    <html lang=\"en\">\r\n      <head>\r\n        <meta charSet=\"utf-8\" />\r\n        <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\r\n        <title>Remix JS </title>\r\n        <Links />\r\n      </head>\r\n      <body>\r\n        <Outlet />\r\n        <LiveReload />\r\n      </body>\r\n    </html>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;AAAA;;;ACAA;;;;;;AAKO,IAAM,QAAuB,MAAM;AACxC,SAAO,CAAC,EAAE,KAAK,cAAc,MAAM;AAAA;AAEtB,eAAe;AAC5B,SACE,oCAAC,QAAD;AAAA,IAAM,MAAK;AAAA,KACT,oCAAC,QAAD,MACE,oCAAC,QAAD;AAAA,IAAM,SAAQ;AAAA,MACd,oCAAC,QAAD;AAAA,IAAM,MAAK;AAAA,IAAW,SAAQ;AAAA,MAC9B,oCAAC,SAAD,MAAO,cACP,oCAAC,OAAD,QAEF,oCAAC,QAAD,MACE,oCAAC,QAAD,OACA,oCAAC,YAAD;AAAA;",
+  "names": []
+}
