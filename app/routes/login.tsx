@@ -139,7 +139,7 @@ export default function Login() {
       <div
         id="g_id_onload"
         data-client_id="600930389454-sjq229oum7ar99jqt9nreutq4r4j8bbk.apps.googleusercontent.com"
-        data-login_uri="http://localhost:3000/login"
+        data-login_uri="https://todo-remix-tj.netlify.app/login"
         data-auto_prompt="false"
       ></div>
       <div
