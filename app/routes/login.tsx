@@ -15,6 +15,7 @@ import {
   register,
   loginWithGoogle,
 } from "~/utils/session.server";
+import { useState } from "react";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styleUrl }];
@@ -132,7 +133,14 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function Login() {
   const actionData = useActionData<ActionData>();
+  const [loginType, updateLoginType] = useState(
+    actionData?.fields?.loginType ? actionData?.fields?.loginType : "register"
+  );
   const [searchParams] = useSearchParams();
+  const toggleLoginType = () => {
+    if (loginType === "register") updateLoginType("login");
+    else updateLoginType("register");
+  };
   return (
     <>
       <script src="https://accounts.google.com/gsi/client" async defer></script>
@@ -150,11 +158,11 @@ export default function Login() {
             data-type="standard"
             data-size="large"
             data-theme="outline"
-            data-text="sign_in_with"
+            data-text="continue_with"
             data-shape="rectangular"
             data-logo_alignment="left"
           ></div>
-          <h1>Login</h1>
+          <p>or</p>
           {actionData?.formError && <h2>{actionData?.formError}</h2>}
           {actionData?.nameError && <h2>{actionData?.nameError}</h2>}
           {actionData?.passwordError && <h2>{actionData?.passwordError}</h2>}
@@ -164,25 +172,11 @@ export default function Login() {
               name="redirectTo"
               value={searchParams.get("redirectTo") ?? undefined}
             />
-            <fieldset>
-              <label>
-                <input
-                  type="radio"
-                  name="loginType"
-                  value="login"
-                  defaultChecked
-                />{" "}
-                Login
-              </label>
-              <label>
-                <input type="radio" name="loginType" value="register" />{" "}
-                Register
-              </label>
-            </fieldset>
+            <input type="hidden" name="loginType" value={loginType} />
             <div className="input-fields">
               <div className="input-field">
-                <label htmlFor="username-input">Username</label>
                 <input
+                  placeholder="Name"
                   type="text"
                   defaultValue={actionData?.fields?.name}
                   id="username-input"
@@ -190,8 +184,8 @@ export default function Login() {
                 />
               </div>
               <div className="input-field">
-                <label htmlFor="password-input">Password</label>
                 <input
+                  placeholder="Password"
                   id="password-input"
                   defaultValue={actionData?.fields?.password}
                   name="password"
@@ -201,6 +195,14 @@ export default function Login() {
               <button type="submit">Submit</button>
             </div>
           </form>
+          <p>
+            {loginType === "register"
+              ? "Already have an account ? "
+              : "Create an account "}
+            <button style={{ color: "#3a0d55" }} onClick={toggleLoginType}>
+              {loginType === "register" ? "Login" : "Register"}
+            </button>
+          </p>
         </div>
       </div>
     </>
