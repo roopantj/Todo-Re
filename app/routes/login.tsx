@@ -136,23 +136,24 @@ export default function Login() {
   return (
     <>
       <script src="https://accounts.google.com/gsi/client" async defer></script>
-      <div
-        id="g_id_onload"
-        data-client_id="600930389454-sjq229oum7ar99jqt9nreutq4r4j8bbk.apps.googleusercontent.com"
-        data-login_uri="https://todo-remix-tj.netlify.app/login"
-        data-auto_prompt="false"
-      ></div>
-      <div
-        className="g_id_signin"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-      ></div>
+
       <div className="login-container">
         <div className="content">
+          <div
+            id="g_id_onload"
+            data-client_id="600930389454-sjq229oum7ar99jqt9nreutq4r4j8bbk.apps.googleusercontent.com"
+            data-login_uri="https://todo-remix-tj.netlify.app/login"
+            data-auto_prompt="false"
+          ></div>
+          <div
+            className="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left"
+          ></div>
           <h1>Login</h1>
           {actionData?.formError && <h2>{actionData?.formError}</h2>}
           {actionData?.nameError && <h2>{actionData?.nameError}</h2>}
